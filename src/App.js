@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{ useEffect } from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Navbar from './components/layout/Navbar';
+import Products from './components/pages/Products';
+import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
 
-function App() {
+const store = configureStore();
+
+const App = () => {
+  useEffect(() => {
+    M.AutoInit();
+  });
   return (
+    <Provider store={store}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+        <Router>
+          <Navbar/>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/products" component={Products} />
+          </Switch>
+        </Router>
     </div>
+    </Provider>
   );
 }
 
