@@ -8,6 +8,10 @@ import Navbar from './components/layout/Navbar';
 import Products from './components/pages/Products';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
+import Contact from './components/pages/Contact';
+import Footer from './components/layout/Footer';
+import Drips from './components/product-pages/Drips';
+import Pipes from './components/product-pages/Pipes';
 
 const store = configureStore();
 
@@ -18,14 +22,17 @@ const App = () => {
   return (
     <Provider store={store}>
     <div className="App">
-      
         <Router>
           <Navbar/>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
             <Route path="/products" component={Products} />
+            <Route path="/drips" component={Drips} />
+            <Route path="/pipes" component={Pipes} />
           </Switch>
+          <Footer />
         </Router>
     </div>
     </Provider>
