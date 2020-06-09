@@ -63,3 +63,51 @@ export const getNonISI = () => async dispatch =>{
         });
     });
 }
+
+export const getAgriR = () => async dispatch =>{
+    return database.ref('agriproductsR').once('value').then((snapshot) => {
+        const agriRoopam = [];
+        snapshot.forEach((childSnapshot) => {
+            agriRoopam.push({
+                id: childSnapshot.key,
+                ...childSnapshot.val()
+            });
+        });
+        dispatch({
+            type: 'GET_AGRI_ROOPAM',
+            agriRoopam
+        });
+    });
+}
+
+export const getAgriRG4 = () => async dispatch =>{
+    return database.ref('agriproductsRG').once('value').then((snapshot) => {
+        const agriRoopamG4 = [];
+        snapshot.forEach((childSnapshot) => {
+            agriRoopamG4.push({
+                id: childSnapshot.key,
+                ...childSnapshot.val()
+            });
+        });
+        dispatch({
+            type: 'GET_AGRI_ROOPAM_GOLD_4',
+            agriRoopamG4
+        });
+    });
+}
+
+export const getAgriRG6 = () => async dispatch =>{
+    return database.ref('agriproductsRGP').once('value').then((snapshot) => {
+        const agriRoopamG6 = [];
+        snapshot.forEach((childSnapshot) => {
+            agriRoopamG6.push({
+                id: childSnapshot.key,
+                ...childSnapshot.val()
+            });
+        });
+        dispatch({
+            type: 'GET_AGRI_ROOPAM_GOLD_6',
+            agriRoopamG6
+        });
+    });
+}

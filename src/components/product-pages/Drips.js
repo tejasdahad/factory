@@ -10,6 +10,17 @@ const Drips = ({ drips, getDrips }) => {
     }, []);
     return (
         <div>
+        <nav>
+            <div className="nav-wrapper black">
+            <div className="col s2"></div>
+            <div className="col s10" style={{paddingLeft:10}}>
+                <Link to="/products" className="breadcrumb">Products</Link>
+                <Link to="/drips" className="breadcrumb">Drips</Link>
+            </div>
+            </div>
+        </nav>
+        <h3 className="center">Drip Irrigation System</h3>
+        <div className="divider"></div>
             <div className="row">
                 <div className="col m1"></div>
                 <div className="col s12 m4">
@@ -30,8 +41,6 @@ const Drips = ({ drips, getDrips }) => {
                         <th>Id.</th>
                         <th>Brand Name</th>
                         <th>Space</th>
-                        <th>ISI Rate</th>
-                        <th>Non-ISI Rate</th>
                     </tr>
                     </thead>
 
@@ -40,8 +49,6 @@ const Drips = ({ drips, getDrips }) => {
                         <td>{drip.id}</td>
                         <td><Link>{drip.Brand_name2}</Link></td>
                         <td>{drip.space}</td>
-                        <td>{drip.ISI_rate}</td>
-                        <td>{drip.Non_ISI_rate}</td>
                     </tr>)}
                     
                    

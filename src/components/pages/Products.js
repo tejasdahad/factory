@@ -52,7 +52,7 @@ const Products = () => {
                 </div>
             </div>
             <div className="row center">
-                <button className="btn waves-effect waves-light">View P.V.C pipes</button>
+                <Link to="/pipes" className="btn waves-effect waves-light">View P.V.C pipes</Link>
             </div>
             <div className="divider"></div>
             <div className="row">
@@ -72,7 +72,7 @@ const Products = () => {
                 </div>
             </div>
             <div className="row center">
-                <button className="btn waves-effect waves-light">View Agri Products</button>
+                <Link to="/agriproducts" className="btn waves-effect waves-light">View Agri Products</Link>
             </div>
             <div className="divider"></div>
 

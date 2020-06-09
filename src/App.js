@@ -12,6 +12,7 @@ import Contact from './components/pages/Contact';
 import Footer from './components/layout/Footer';
 import Drips from './components/product-pages/Drips';
 import Pipes from './components/product-pages/Pipes';
+import AgriProducts from './components/product-pages/AgriProducts';
 
 const store = configureStore();
 
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/products" component={Products} />
             <Route path="/drips" component={Drips} />
             <Route path="/pipes" component={Pipes} />
+            <Route path="/agriproducts" component={AgriProducts} />
           </Switch>
           <Footer />
         </Router>

@@ -12,6 +12,15 @@ const Pipes = ({ getNonISI, getPvcPipesISIM, getPvcPipesISIR, pvcISIR, pvcISIM, 
     },[]);
     return (
         <div>
+        <nav>
+            <div className="nav-wrapper black">
+            <div className="col s2"></div>
+            <div className="col s10" style={{paddingLeft:10}}>
+                <Link to="/products" className="breadcrumb">Products</Link>
+                <Link to="/pipes" className="breadcrumb">Pipes</Link>
+            </div>
+            </div>
+        </nav>
         <h3 className="center">P.V.C Pipes</h3>
         <div className="divider"></div>
         <h5 className="center">ISI PVC PIPE ROOPAM GOLD</h5>

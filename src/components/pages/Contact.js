@@ -1,7 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [query, setQuery] = useState('');
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        const state = {
+            name,
+            email,
+            phone,
+            query
+        };
+        sendFeedback("1", {message_html: `My phone number is ${phone}. My email id is ${email}. I wanted to know about ${query}.`, from_name: state.name, reply_to: state.email })
+        setQuery('');
+        setName('');
+        setPhone('');
+        setEmail('');
+    }
+
+    const sendFeedback = (templateId, variables) => {
+        const state = {
+            name,
+            email,
+            phone,
+            query
+        };
+        window.emailjs.send('gmail',  'template_xoQtcWCs', variables, 'user_z1aRq6nlDEVNq9tutcj8V')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+      }
     return (
         <div className="container">
             <div className="card" style={{width:500, height:500, marginLeft:200}}>
@@ -34,28 +68,28 @@ const Contact = () => {
             <div className="row">
                 <h4 className="center">Enquiry Form</h4>
                 <fieldset>
-                <form className="col s12">
+                <form id="enquiryForm" onSubmit={onSubmit} className="col s12">
                 <div className="row">
                     <div className="input-field col s12">
-                    <input id="name" type="text" className="validate" />
+                    <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} className="validate" />
                     <label for="name">Name</label>
                     </div>
                 </div>
                 <div className="row">
                     <div class="input-field col s12">
-                    <input id="email" type="email" className="validate" />
+                    <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="validate" />
                     <label for="email">Email</label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="input-field col s12">
-                    <input id="phone" type="tel" className="validate" />
+                    <input id="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} className="validate" />
                     <label for="phone">Phone Number</label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="input-field col s12">
-                    <textarea id="query" className="validate" />
+                    <textarea id="query" value={query} onChange={(e) => setQuery(e.target.value)} className="validate" />
                     <label for="query">What do you want to enquire?</label>
                     </div>
                 </div>

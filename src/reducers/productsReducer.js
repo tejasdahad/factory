@@ -2,7 +2,10 @@ const initialState = {
     drips: [],
     pvcISIR: [],
     pvcISIM: [],
-    nonISI: []
+    nonISI: [],
+    agriRoopam: [],
+    agriRoopamG4: [],
+    agriRoopamG6: []
 };
 
 export default (state = initialState, action) => {
@@ -26,6 +29,21 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 nonISI: action.nonISIPipe
+            };
+        case 'GET_AGRI_ROOPAM':
+            return {
+                ...state,
+                agriRoopam: action.agriRoopam
+            };
+        case 'GET_AGRI_ROOPAM_GOLD_4':
+            return {
+                ...state,
+                agriRoopamG4: action.agriRoopamG4
+            };
+        case 'GET_AGRI_ROOPAM_GOLD_6':
+            return {
+                ...state,
+                agriRoopamG6: action.agriRoopamG6
             };
         default:
             return state;
