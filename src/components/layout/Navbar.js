@@ -6,7 +6,8 @@ const Navbar = () => {
         <div>
             <nav>
                 <div className="nav-wrapper blue">
-                    <Link to="/" className="brand-logo">Laddha Agro Plast Industries</Link>
+                    <h5 className="left hide-on-med-and-down">LADDHA AGRO PLAST INDUSTRIES</h5>
+                    <Link to="/" className="brand-logo center"><img src="/images/logo.jpeg" style={{height:65}} alt="logo" /></Link>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><Link to="/">Home</Link></li>
@@ -20,7 +21,7 @@ const Navbar = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About us</Link></li>
             <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/products">Products<a className='dropdown-trigger' href='#' data-target='dropdown1'><i className="material-icons">keyboard_arrow_down</i></a></Link></li>
+            <li><Link to="/products">Products <a className='dropdown-trigger' href='#' data-target='dropdown1'><i className="material-icons">arrow_drop_down</i></a></Link></li>
             </ul>
             <ul id='dropdown1' class='dropdown-content' style={{width:200, height:200}}>
                 <li><Link to="/drips">Drips</Link></li>

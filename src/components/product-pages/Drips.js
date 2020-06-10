@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getDrips } from '../../actions/productsAction';
 import { Link } from 'react-router-dom';
 import Spinner from '../layout/Spinner';
+import './Drips.css';
 
 const Drips = ({ drips, getDrips }) => {
     useEffect(() => {
@@ -21,6 +22,21 @@ const Drips = ({ drips, getDrips }) => {
         </nav>
         <h3 className="center">Drip Irrigation System</h3>
         <div className="divider"></div>
+        <div className="row benefit">
+            <div className="col m3">
+            <h1>Benefits</h1>
+            </div>
+            <div className="col m9">
+            <ol className="left-align">
+                <li>A large sum of water is saved by using drips.</li>
+                <li>Water is supplied to a greater area in small amount of time.</li>
+                <li>Unwanted Grass in farm is reduced greatly. Prevously as water was wasted to unwanted area, so it would lead to growing of unwanted grass anywhere.</li>
+                <li>Main benefit is proper amount of water is supplied to crops hence leading to their proper growth.</li>
+            </ol>
+            </div>
+        </div>
+        <div className="brands">
+        <h3 className="center">Brands we make...</h3>
             <div className="row">
                 <div className="col m1"></div>
                 <div className="col s12 m4">
@@ -33,29 +49,22 @@ const Drips = ({ drips, getDrips }) => {
                     <img src="/images/16mm_non.jpg" alt="non-isi 16mm" style={{width:500, height: 300}} />
                 </div>
             </div>
-            {drips.length===0 && <div className="center"><Spinner /></div>}
-            {drips.length !==0 && <div className="container">
-                <table className="responsive striped centered">
-                    <thead>
-                    <tr>
-                        <th>Id.</th>
-                        <th>Brand Name</th>
-                        <th>Space</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    {drips.length!==0 && drips.map((drip) => <tr>
-                        <td>{drip.id}</td>
-                        <td><Link>{drip.Brand_name2}</Link></td>
-                        <td>{drip.space}</td>
-                    </tr>)}
-                    
-                   
-                    </tbody>
-                </table>
-            </div>}
         </div>
+        <div className="sizes">
+            <div className="row">
+                <div className="col m9">
+                    <h6>Two sizes are available. One of 12mm and second of 16mm.</h6>
+                    <p>In 12mm, size varies from 12.30 to 12.90.</p>
+                    <p>In 16mm, size varies from 16.30 to 16.90</p>
+                </div>
+                <div className="col m3">
+                    <h4>Sizes we manufacture</h4>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+
     )
 }
 

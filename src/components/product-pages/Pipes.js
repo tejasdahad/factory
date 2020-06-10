@@ -23,92 +23,39 @@ const Pipes = ({ getNonISI, getPvcPipesISIM, getPvcPipesISIR, pvcISIR, pvcISIM, 
         </nav>
         <h3 className="center">P.V.C Pipes</h3>
         <div className="divider"></div>
-        <h5 className="center">ISI PVC PIPE ROOPAM GOLD</h5>
-        <div className="center">
-        <img src="/images/isiroopam.jpg" alt="isir" style={{width:1000, height: 300}}/>
+        <h4 className="center">Brands we make...</h4>
+        <div className="container">
+        <ul className="collapsible">
+            <li className="active">
+            <div className="collapsible-header"><h6>Roopam Gold</h6></div>
+            <div className="collapsible-body"><span>
+                <img src="images/isiroopam.jpg" alt="isiroopam" style={{width:500, height:250}} />
+            </span></div>
+            </li>
+            <li>
+            <div className="collapsible-header"><h6>Muviflex</h6></div>
+            <div className="collapsible-body"><span>
+            <img src="images/pvcISIM.jpeg" alt="pvcisim" style={{width:500, height:250}} />
+            </span></div>
+            </li>
+            <li>
+            <div className="collapsible-header"><h6>Varun Gold</h6></div>
+            <div className="collapsible-body"><span></span></div>
+            </li>
+            <li>
+            <div className="collapsible-header"><h6>Sardar</h6></div>
+            <div className="collapsible-body"><span></span></div>
+            </li>
+            <li>
+            <div className="collapsible-header"><h6>Gopi</h6></div>
+            <div className="collapsible-body"><span></span></div>
+            </li>
+            <li>
+            <div className="collapsible-header"><h6>Spark</h6></div>
+            <div className="collapsible-body"><span></span></div>
+            </li>
+        </ul>
         </div>
-        {pvcISIR.length===0 && <div className="center"><Spinner /></div>}
-        {pvcISIR.length !==0 && <div className="container">
-            <table className="responsive striped centered">
-                <thead>
-                <tr>
-                    <th>Id.</th>
-                    <th>Size</th>
-                    <th>Class- 2. 4Kg</th>
-                    <th>Class- 3. 6Kg</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                {pvcISIR.length!==0 && pvcISIR.map((pvc) => <tr>
-                    <td>{pvc.id}</td>
-                    <td><Link>{pvc.size}</Link></td>
-                    <td>{pvc.class1}</td>
-                    <td>{pvc.class2}</td>
-                </tr>)}
-                
-               
-                </tbody>
-            </table>
-        </div>}
-        <h5 className="center">ISI PVC PIPE MUVIFLEX</h5>
-        <div className="center">
-            <img src="/images/pvcISIM.jpeg" alt="pvcISIM" style={{width:1000, height: 300}}/>
-        </div>
-        {pvcISIM.length===0 && <div className="center"><Spinner /></div>}
-        {pvcISIM.length !==0 && <div className="container">
-            <table className="responsive striped centered">
-                <thead>
-                <tr>
-                    <th>Id.</th>
-                    <th>Size</th>
-                    <th>Class- 2. 4Kg</th>
-                    <th>Class- 3. 6Kg</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                {pvcISIM.length!==0 && pvcISIM.map((pvc) => <tr>
-                    <td>{pvc.id}</td>
-                    <td><Link>{pvc.size}</Link></td>
-                    <td>{pvc.class1}</td>
-                    <td>{pvc.class2}</td>
-                </tr>)}
-                
-               
-                </tbody>
-            </table>
-        </div>}
-        <h5 className="center">NON ISI PIPE 6 MTR</h5>
-        <div className="center">
-            <img src="/images/nonisi.jpg" alt="nonisi" style={{width:1000, height:300}} />
-        </div>
-        {nonISI.length===0 && <div className="center"><Spinner /></div>}
-        {nonISI.length !==0 && <div className="container">
-            <table className="responsive striped centered">
-                <thead>
-                <tr>
-                    <th>Id.</th>
-                    <th>Size</th>
-                    <th>Light Weight</th>
-                    <th>Medium Weight</th>
-                    <th>Heavy Weight</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                {nonISI.length!==0 && nonISI.map((pvc) => <tr>
-                    <td>{pvc.id}</td>
-                    <td><Link>{pvc.size}</Link></td>
-                    <td>{pvc.lw}</td>
-                    <td>{pvc.mw}</td>
-                    <td>{pvc.hw}</td>
-                </tr>)}
-                
-               
-                </tbody>
-            </table>
-        </div>}
         </div>
     )
 }
