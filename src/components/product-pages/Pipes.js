@@ -37,23 +37,7 @@ const Pipes = ({ getNonISI, getPvcPipesISIM, getPvcPipesISIR, pvcISIR, pvcISIM, 
             <div className="collapsible-body"><span>
             <img src="images/pvcISIM.jpeg" alt="pvcisim" style={{width:500, height:250}} />
             </span></div>
-            </li>
-            <li>
-            <div className="collapsible-header"><h6>Varun Gold</h6></div>
-            <div className="collapsible-body"><span></span></div>
-            </li>
-            <li>
-            <div className="collapsible-header"><h6>Sardar</h6></div>
-            <div className="collapsible-body"><span></span></div>
-            </li>
-            <li>
-            <div className="collapsible-header"><h6>Gopi</h6></div>
-            <div className="collapsible-body"><span></span></div>
-            </li>
-            <li>
-            <div className="collapsible-header"><h6>Spark</h6></div>
-            <div className="collapsible-body"><span></span></div>
-            </li>
+            </li>            
         </ul>
         </div>
         </div>

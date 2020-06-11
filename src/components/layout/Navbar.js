@@ -7,7 +7,7 @@ const Navbar = () => {
             <nav>
                 <div className="nav-wrapper blue">
                     <h5 className="left hide-on-med-and-down">LADDHA AGRO PLAST INDUSTRIES</h5>
-                    <Link to="/" className="brand-logo center"><img src="/images/logo.jpeg" style={{height:65}} alt="logo" /></Link>
+                    <Link to="/" className="brand-logo center"><img className="hoverable" src="/images/logo.jpg" style={{height:65}} alt="logo" /></Link>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><Link to="/">Home</Link></li>

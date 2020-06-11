@@ -1,19 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Products.css';
 
 const Products = () => {
     return (
         <div>
-            <h2 className="center" style={{marginBottom:0}}>PRODUCTS WE MAKE</h2>
+            <div className="title">
+                <h2 className="center" style={{marginBottom:0, marginTop:0, paddingBottom:10}}>PRODUCTS WE MAKE</h2>
+            </div>
             <div className="divider"></div>
-            <div className="row hoverable" style={{marginBottom:10}}>
-                <h3 className="center">Drip Irrigation Systems</h3>
+            <div className="row hoverable coloring" style={{marginBottom:10}}>
+                <h3 className="center" style={{marginTop:5, paddingTop:5}}>Drip Irrigation Systems</h3>
                 <div className="row">
-                <div className="col m2">
+                <div className="col s12 m1 hide-on-med-and-down">
                 <img src="/images/drip.jfif" alt="drip1" style={{width:300, height:200}}/>
                 </div>
-                <div className="col m1"></div>
-                <div className="col m6 center-align">
+                <div className="col s12 m2 hide-on-med-and-down"></div>
+                <div className="col s12 m6 center-align">
                     <p>Drip irrigation is today’s need because Water – nature’s gift to mankind is not unlimited and free forever. World water resources are fast diminishing. The one and only answer to this problem is Drip Irrigation Systems.
 
                     After detailed study of inter–relationship among soil, water, crop, land terrain and related agro climatic conditions, We designed a suitable and economically viable system to deliver a measured quantity of water at the root zone of each plant at regular intervals. This is to ensure that the plants do not suffer from stress or strain of less and over watering. The system installed at the farmer’s field is commissioned and training imparted to the farmer, followed by regular after sales services.
@@ -23,31 +26,31 @@ const Products = () => {
                     By installing Laddha Drip, you will be a member of a happy family of Laddha Drip System owners.
                     </p>
                 </div>
-                <div className="col m2">
+                <div className="col s12 m2">
                 <img src="/images/drip3.jpg" alt="drip2" style={{width:300, height:200}}/>
                 </div>
                 </div>
                 <div className="row">
-                    <div className="col m3">
+                    <div className="col s12 m3">
                         <img src="/images/drip6.jpg" alt="drip6" style={{width:300, height:200}} />
                     </div>
-                    <div className="col m1"></div>
-                    <div className="col m3">
+                    <div className="col m2"></div>
+                    <div className="col s12 m3">
                         <img src="/images/drip5.jpg" alt="drip5" style={{width:300, height:200}} />
                     </div>
-                    <div className="col m1"></div>
-                    <div className="col m3">
+                    <div className="col s12 m1"></div>
+                    <div className="col s12 m3 hide-on-med-and-down">
                         <img src="/images/drip1.jpg" alt="drip1" style={{width:300, height:200}} />
                     </div>
                 </div>
                 <div className="row center">
-                    <Link to="/drips" className="btn waves-effect waves-light hoverable ">View Drips</Link>
+                    <Link to="/drips" className="btn waves-effect black waves-light hoverable pulse">View Drips</Link>
                 </div>
             </div>
             
             <div className="divider"></div>
-            <div className="row hoverable" style={{marginBottom:10}}>
-                <h3 className="center">P.V.C Pipes</h3>
+            <div className="row hoverable coloring" style={{marginBottom:10}}>
+                <h3 className="center" style={{marginTop:0, paddingTop:5}}>P.V.C Pipes</h3>
                 <div className="row">
                 <div className="col m6">
                     <div className="row">
@@ -81,13 +84,13 @@ const Products = () => {
                     </div>
                 </div>
                 <div className="row center">
-                    <Link to="/pipes" className="btn waves-effect waves-light hoverable">View P.V.C pipes</Link>
+                    <Link to="/pipes" className="btn waves-effect black waves-light hoverable pulse">View P.V.C pipes</Link>
                 </div>
             </div>
             
             <div className="divider"></div>
-            <div className="row hoverable" style={{marginBottom:10}}>
-                <h3 className="center">AGRICULTURAL FITTINGS ROOPAM</h3>
+            <div className="row hoverable coloring" style={{marginBottom:10}}>
+                <h3 className="center" style={{marginTop:0, paddingTop:5}}>AGRICULTURAL FITTINGS ROOPAM</h3>
                 <div className="col m2">
                 <img src="/images/elbow.jpg" alt="elbow" style={{width:300, height:200}}/>
                 </div>
@@ -114,7 +117,7 @@ const Products = () => {
                     </div>
                 </div>
                 <div className="row center">
-                    <Link to="/agriproducts" className="btn waves-effect waves-light hoverable">View Agri Products</Link>
+                    <Link to="/agriproducts" className="btn waves-effect black waves-light hoverable pulse">View Agri Products</Link>
                 </div>
             </div>
             
